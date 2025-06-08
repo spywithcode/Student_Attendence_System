@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body style="background-color: aqua;">
+    <div class="login-container">
+        <form class="login-form" id="loginForm" novalidate>
+            <div class="branding">
+                <img src="/static/logo.png" alt="App Logo" class="logo" />
+                <div class="tagline">Welcome to Face Recognition Attendance System</div>
+            </div>
+            <h2>Login to Your Account</h2>
+            <div class="form-group">
+                <label for="email">Email or Username</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email or username" required aria-required="true" aria-describedby="emailError" />
+                <span class="validation-message" id="emailError" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6" aria-required="true" aria-describedby="passwordError" />
+                <button type="button" class="toggle-password" aria-label="Show or hide password">&#128065;</button>
+                <span class="validation-message" id="passwordError" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-options">
+                <label><input type="checkbox" id="rememberMe" name="rememberMe" /> Remember Me</label>
+                <a href="#" class="forgot-password" tabindex="0">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-button" aria-label="Submit login form">Login</button>
+            <div class="social-login" role="region" aria-label="Social login options">
+                <p>Or login with</p>
+                <button type="button" class="social-btn google" aria-label="Login with Google">Google</button>
+                <button type="button" class="social-btn facebook" aria-label="Login with Facebook">Facebook</button>
+                <button type="button" class="social-btn github" aria-label="Login with GitHub">GitHub</button>
+            </div>
+            <div class="signup-redirect">
+                <p>Don't have an account? <a href="#" tabindex="0">Sign Up</a></p>
+            </div>
+            <div class="language-toggle">
+                <label for="languageSelect">Language:</label>
+                <select id="languageSelect" name="languageSelect" aria-label="Select language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
+            <div class="dark-mode-toggle">
+                <button type="button" id="darkModeToggle" aria-label="Toggle dark/light mode">🌙</button>
+            </div>
+            <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+            <!-- Placeholder for reCAPTCHA -->
+            <div class="recaptcha-placeholder" aria-label="reCAPTCHA widget placeholder" tabindex="0">
+                <!-- reCAPTCHA widget will be here -->
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
